@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+ {
+	csssrc: "https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap";
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.padding {
+	@apply px-2 md:px-0;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.text-sm-md {
+	@apply text-sm md:text-lg;
+}
+
+.animate {
+	@apply hover:scale-[103%] transition-all duration-300;
+}
+
+.margin {
+	@apply my-12 md:my-16;
+}
+
+.button {
+	@apply bg-accent text-gray-100 px-3 py-[2px] rounded-full text-sm-md;
+}
+
+.button1 {
+	@apply bg-accent text-gray-100 px-3 py-2 rounded-full text-sm-md;
+}
+
+.login-button {
+	@apply flex items-center border px-4 py-2 gap-2 rounded-lg cursor-pointer my-4 border-accent hover:bg-sec;
+}
+
+.bg-img {
+	background-image: url("../../public/img1.jpg");
+	object-fit: ;
+	height: 100%;
 }
